@@ -86,6 +86,7 @@ header {
     background-color: #a9cee1;
     margin-left: 3rem;
     white-space: nowrap; 
+    border: none;
 }
 
 .fa-search {
@@ -110,7 +111,6 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    --gap: 2rem;
 }
 
 
@@ -157,7 +157,7 @@ aside {
 
 
 
-@media (min-width: 720px) {
+@media all and (min-width: 720px) {
     h1 {
         font-size: 8rem;
     }
@@ -190,7 +190,7 @@ aside {
 
 }
 
-@media (min-width: 1000px) {
+@media all and (min-width: 1000px) {
     h1 {
         font-size: 15rem;
     }
@@ -231,13 +231,13 @@ aside {
     }
 }
 
-@media (min-width: 2000px) {
+@media all and (min-width: 1500px) {
     h1 {
-        font-size: 15rem;
+        font-size: 10rem;
     }
     
     h2 {
-        font-size: 8rem;
+        font-size: 6rem;
     } 
     
     h3 {
@@ -247,7 +247,7 @@ aside {
     }
 
     p {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     span {
@@ -272,7 +272,8 @@ aside {
     body {
         grid-template-columns: 60% 40%;
         grid-template-rows: auto 1fr;
-        grid-template-areas: ".. header" "main aside";
+        grid-template-areas: "main header" "main aside";
+        width: 100%;
     }
     main {
         
@@ -292,7 +293,7 @@ aside {
     }
 }
 
-@media (min-width: 2600px) {
+@media all and (min-width: 1500px) {
     .order3 {
         display: flex;
     }
