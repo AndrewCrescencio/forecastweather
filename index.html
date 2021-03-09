@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/881d0e5c76.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body onload="onLoad()">
+   
+
+    
+    <header class="flexbox header">
+        <div class="stretch header__input">
+            <input id="searchInput" type="text" placeholder="Search..." />
+        </div>
+        <div class="normal header__button">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+    <div class="current">
+
+        
+        <h1 class="current__temp">26°</h1>    
+        <div>
+            <h2 class="current__city">London</h2>
+            <span class="current__date">10:26 - Tuesday, 22 Oct '19</span>
+        </div>
+        
+        <div class="current__item">
+            <img class="current__icon" src="#" alt="current weather icon" style="display: block; width: 100px; height: 100px;">
+            <span class="current__description">Sunny</span>
+        </div>
+    </div>
+    </main>
+
+
+    <section class="details">    
+        <div class="details__current">
+            <h3>Weather details</h3>
+            
+            <div class="row">
+            <span>Low and high temperature</span><span><span class="current__mintemp">20</span> | <span class="current__maxtemp">29c</span></span>   
+            </div>
+            <div class="row">
+                <span>Cloud</span><span class="current__cloud">12%</span>
+            </div>
+            <div class="row">
+                <span>Humidity</span><span class="current__humidity">79%</span>
+            </div>
+            <div class="row">
+                <span>Wind</span><span class="current__wind">1km/k</span>
+            </div>
+            <div class="row">
+                <span>Rain</span><span class="current__rain">mm</span>
+            </div>
+        </div>
+        
+        <div class="details__byhour">        
+            <h3>by hour</h3>
+            
+        </div>
+    </section>
+</body>
+</html>
