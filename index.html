@@ -12,61 +12,70 @@
     <script src="index.js" defer></script>
 </head>
 <body onload="onLoad()">
-   
 
-    
-    <header class="flexbox header">
-        <div class="stretch header__input">
-            <input id="searchInput" type="text" placeholder="Search..." />
+        <header class="flexbox header">
+        <div class="header__input">
+          <input id="searchInput" type="text" placeholder="Search..." />
         </div>
-        <div class="normal header__button">
-            <button id="searchButton"><i class="fas fa-search"></i></button>
+        <div class="header__button">
+          <button id="searchButton"><i class="fas fa-search"></i></button>
         </div>
-    </header>
+      </header>
+  
+    <main class="current">
+      
+            
 
-    <main>
-    <div class="current">
+            <div class="current__container">
 
+                <div class="current__container__item order2">
+                    <h1 class="current__temp" style="display: block;">26°</h1>
+                </div>
+            
+            
         
-        <h1 class="current__temp">26°</h1>    
-        <div>
-            <h2 class="current__city">London</h2>
-            <span class="current__date">10:26 - Tuesday, 22 Oct '19</span>
-        </div>
-        
-        <div class="current__item">
-            <img class="current__icon" src="#" alt="current weather icon" style="display: block; width: 100px; height: 100px;">
-            <span class="current__description">Sunny</span>
-        </div>
-    </div>
+            <div class="current__container__item order1">
+                <h2 class="current__city">London</h2>
+                <p class="current__date">10:26 - Tuesday, 22 Oct '19</p>
+            </div>
+
+            
+
+            <div class="current__container__item order3">
+                <img class="current__icon" src="#" alt="current weather icon" style="display: block; width: 64px;">
+                <p class="current__description">Sunny</p>
+            </div>
+
+            </div>
     </main>
-
-
-    <section class="details">    
-        <div class="details__current">
-            <h3>Weather details</h3>
-            
-            <div class="row">
-            <span>Low and high temperature</span><span><span class="current__mintemp">20</span> | <span class="current__maxtemp">29c</span></span>   
-            </div>
-            <div class="row">
-                <span>Cloud</span><span class="current__cloud">12%</span>
-            </div>
-            <div class="row">
-                <span>Humidity</span><span class="current__humidity">79%</span>
-            </div>
-            <div class="row">
-                <span>Wind</span><span class="current__wind">1km/k</span>
-            </div>
-            <div class="row">
-                <span>Rain</span><span class="current__rain">mm</span>
-            </div>
-        </div>
+    
+    <aside class="details">
         
-        <div class="details__byhour">        
-            <h3>by hour</h3>
-            
+          
+      <div class="details__current">
+        <h3>Weather details</h3>
+  
+        <div class="row">
+          <span>Low and high temperature</span><span><span class="current__mintemp">20</span> | <span class="current__maxtemp">29c</span></span>
         </div>
-    </section>
-</body>
+        <div class="row">
+          <span>Cloud</span><span class="current__cloud">12%</span>
+        </div>
+        <div class="row">
+          <span>Humidity</span><span class="current__humidity">79%</span>
+        </div>
+        <div class="row">
+          <span>Wind</span><span class="current__wind">1km/k</span>
+        </div>
+        <div class="row">
+          <span>Rain</span><span class="current__rain">mm</span>
+        </div>
+      </div>
+  
+      <div class="details__byhour">
+        <h3>by hour</h3>
+  
+      </div>
+    </aside>
+  </body>
 </html>
