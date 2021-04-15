@@ -3,311 +3,162 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-  }
-  
-  h1 {
-    font-size: 5rem;
-  }
-  
-  h2 {
-    font-size: 3rem;
-  }
-  
-  h3 {
+}
+
+h1 {
+    font-size: 4rem;
+    /* 64px */
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+p {
     font-size: 1.5rem;
-    font-weight: bold;
-    padding: 2rem 0;
-  }
-  p {
-    font-size: 1.5rem;
-  }
-  
-  span {
-    font-size: 1rem;
-  }
-  html {
-    background-image: linear-gradient(
-      to right,
-      #2d91cd,
-      #3f9cd2,
-      #50a6d7,
-      #60b1db,
-      #70bbe0,
-      #7bc0e2,
-      #86c5e4,
-      #90cae6,
-      #97cbe5,
-      #9dcce4,
-      #a3cde2,
-      #a9cee1
-    );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  body {
+}
+
+body {
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas: "header" "main" "aside";
     color: white;
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr;
     font-family: "Roboto", sans-serif;
-  }
-  
-  header {
-    grid-area: header;
+    background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+}
+
+
+/*Searcher Bar*/
+
+nav {
     display: flex;
     align-items: flex-end;
     padding-left: 3rem;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .header__input {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.searchbar__input {
     flex: 1;
     border-bottom: 1px solid white;
-  }
-  
-  .header__button {
-    flex: 0;
-  }
-  
-  .header__input input {
+}
+
+.searchbar__input input {
     padding: 0.5em 1em;
     width: 100%;
-    background: transparent;
     border: none;
-  }
-  
-  ::placeholder {
+    background-color: transparent;
+}
+
+ ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder {
+    background-color: transparent;
+    opacity: 1;
+    /* Firefox */
+    font-weight: bold;
+}
+
+ :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: white;
-  }
-  
-  ::-ms-input-placeholder {
+    font-weight: bold;
+}
+
+ ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: white;
-  }
-  
-  .header__button button {
+    font-weight: bold;
+}
+
+.searchbar__button {
+    flex: 0;
+}
+
+.searchbar__button button {
     width: 100px;
     height: 100px;
-    background-color: #a9cee1;
     margin-left: 3rem;
-    white-space: nowrap;
     border: none;
-  }
-  
-  .fa-search {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.fa-search {
     font-size: 2rem;
-    color: black;
-  }
-  
-  /*  .current    */
-  
-  main {
-    grid-area: main;
+    color: white;
+}
+
+
+/* Main Content - Weather */
+
+main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0 0.75rem;
-  }
-  
-  .current__container {
-    display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  /*  .current__container items order */
-  .order1 {
-    order: 1;
-  }
-  
-  .order2 {
-    order: 2;
-  }
-  
-  .order3 {
-    order: 3;
+    padding: 1rem;
+}
+
+.weather__temp {
     display: flex;
-    flex-direction: column;
     align-items: center;
-  }
-  
-  .current__container__item {
-    width: max-content;
-  }
-  
-  /*  aside   */
-  
-  aside {
-    grid-area: aside;
+}
+
+.weather__temp__current {
+    margin-right: 1rem;
+}
+
+.weather__temp__icon {
+    margin-right: 1rem;
+}
+
+
+/* Aside - Weather Detail */
+
+aside {
     overflow: auto;
-    padding: 0 3rem;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .row {
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
-  }
-  
-  .details__byhour {
-    border-top: 1px solid white;
-  }
-  .details__byhour__container {
+    margin-bottom: 1rem;
+}
+
+.details__byhour {
+    border-top: 1px solid black;
+    padding: 1rem 0;
+}
+
+.details__byhour__container {
     margin-bottom: 2rem;
-  }
-  
-  /*  @media  */
-  
-  @media all and (min-width: 720px) {
-    h1 {
-      font-size: 8rem;
-    }
-  
-    h2 {
-      font-size: 4rem;
-    }
-  
-    h3 {
-      font-size: 2rem;
-      font-weight: bold;
-      padding: 2rem 0;
-    }
-  
-    p {
-      font-size: 2rem;
-    }
-  
-    span {
-      font-size: 1.5rem;
-    }
-  
-    .row {
-      margin-bottom: 2rem;
-    }
-    /*  .details .row container (weather by hour)*/
-    .details__byhour__container {
-      margin-bottom: 4rem;
-    }
-  }
-  
-  @media all and (min-width: 1000px) {
-    h1 {
-      font-size: 15rem;
-    }
-  
-    h2 {
-      font-size: 8rem;
-    }
-  
-    h3 {
-      font-size: 3rem;
-      font-weight: bold;
-      padding: 2rem 0;
-    }
-  
-    p {
-      font-size: 3rem;
-    }
-  
-    input {
-      font-size: 2rem;
-    }
-    span {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-  
-    .row {
-      margin-bottom: 2rem;
-    }
-    /*  .details .row container (weather by hour)*/
-    .details__byhour__container {
-      margin-bottom: 4rem;
-    }
-  
-    img {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  
-  @media all and (min-width: 1500px) {
-    h1 {
-      font-size: 10rem;
-    }
-  
-    h2 {
-      font-size: 6rem;
-    }
-  
-    h3 {
-      font-size: 3rem;
-      font-weight: bold;
-      padding: 2rem 0;
-    }
-  
-    p {
-      font-size: 2rem;
-    }
-  
-    span {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-  
-    .row {
-      margin-bottom: 2rem;
-    }
-    /*  .details .row container (weather by hour)*/
-    .details__byhour__container {
-      margin-bottom: 4rem;
-    }
-  
-    img {
-      width: 100px;
-      height: 100px;
-    }
-  
-    /*  chance the layout   */
-    body {
-      grid-template-columns: 60% 40%;
-      grid-template-rows: auto 1fr;
-      grid-template-areas: "main header" "main aside";
-      width: 100%;
+}
+
+
+/* Media Queries */
+
+@media (min-width:1280px) {
+    nav {
+        grid-area: nav;
     }
     main {
-      align-items: flex-end;
+        grid-area: main;
     }
-    .current__container {
-      margin-bottom: 10rem;
+    aside {
+        grid-area: aside;
     }
-    .order1 {
-      order: 2;
+    body {
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 1fr 500px;
+        grid-template-areas: "main nav" "main aside";
     }
-    .order2 {
-      order: 1;
-    }
-    .order3 {
-      display: none;
-    }
-  }
-  
-  @media all and (min-width: 1500px) {
-    .order3 {
-      display: flex;
-    }
-  }
+}

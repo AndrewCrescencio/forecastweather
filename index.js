@@ -1,6 +1,4 @@
 const date = new Date();
-const hour = date.getHours();
-const minute = date.getMinutes();
 const dayWeek = date.getDay();
 const dayWeekArr = [
   "Sunday",
@@ -63,13 +61,10 @@ const weather = {
 
     document.querySelector(
       ".current__date"
-    ).innerText = `${hour}:${minute} - ${dayWeekArr[dayWeek]}, ${dayMonth} ${monthArr[month]} ${year}`;
+    ).innerText = `${dayWeekArr[dayWeek]}, ${dayMonth} ${monthArr[month]} ${year}`;
     document.querySelector(".current__city").innerText = city;
     document.querySelector(".current__icon").src = current_icon;
     document.querySelector(".current__temp").innerText = current_temp + "°";
-    document.querySelector(
-      ".current__description"
-    ).innerText = current_description;
     document.querySelector(".current__mintemp").innerText = current_mintemp;
     document.querySelector(".current__maxtemp").innerText = current_maxtemp;
     document.querySelector(".current__cloud").innerText = current_cloud + "%";
