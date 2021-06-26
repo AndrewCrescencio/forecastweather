@@ -14,7 +14,7 @@
 </head>
 
 <body onload="onLoad()">
-
+  <!--  -->
   <nav class="searchbar">
     <div class="searchbar__input">
       <input id="searchInput" type="text" placeholder="Search..." />
@@ -24,18 +24,17 @@
     </div>
   </nav>
 
-  <main class="weather current">
-
-    <div class="weather__temp">
-      <h1 class="weather__temp__current current__temp" style="display: block;">26°</h1>
-      <img class="weather__temp__icon current__icon" src="#" alt="">
+  <main class="weather">
+    <div class="weather__content">
+      <h1 class="current__temp">26°</h1>
+      <div class="weather__content__main">
+        <div>
+          <h2 class="current__city">London</h2>
+          <p class="current__date">Tuesday, 22 Oct '19</p>
+        </div>
+        <img class="current__icon" src="#" alt="">
+      </div>
     </div>
-
-    <div class="weather__info">
-      <h2 class="current__city">London</h2>
-      <p class="current__date">Tuesday, 22 Oct '19</p>
-    </div>
-
   </main>
 
   <aside class="details">
@@ -44,7 +43,7 @@
       <h3>Weather details</h3>
 
       <div class="row">
-        <span>Low and high temperature</span><span><span class="current__mintemp">20</span> | <span
+        <span>Low and high</span><span><span class="current__mintemp">20</span> | <span
             class="current__maxtemp">29c</span></span>
       </div>
       <div class="row">

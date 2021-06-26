@@ -6,7 +6,7 @@
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     /* 64px */
 }
 
@@ -28,73 +28,14 @@ body {
     height: 100vh;
     color: white;
     display: grid;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: auto 50% 1fr;
     font-family: "Roboto", sans-serif;
     background-color: #29539b;
-    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
-
-
-/*Searcher Bar*/
-
-nav {
-    display: flex;
-    align-items: flex-end;
-    padding-left: 3rem;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.searchbar__input {
-    flex: 1;
-    border-bottom: 1px solid white;
-}
-
-.searchbar__input input {
-    padding: 0.5em 1em;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-}
-
- ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    background-color: transparent;
-    opacity: 1;
-    /* Firefox */
-    font-weight: bold;
-}
-
- :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: white;
-    font-weight: bold;
-}
-
- ::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: white;
-    font-weight: bold;
-}
-
-.searchbar__button {
-    flex: 0;
-}
-
-.searchbar__button button {
-    width: 100px;
-    height: 100px;
-    margin-left: 3rem;
-    border: none;
-    background: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.fa-search {
-    font-size: 2rem;
-    color: white;
-}
-
 
 /* Main Content - Weather */
 
@@ -106,59 +47,154 @@ main {
     padding: 1rem;
 }
 
-.weather__temp {
+.weather__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 8rem 5rem;
+}
+
+.weather__content__main {
     display: flex;
     align-items: center;
 }
 
-.weather__temp__current {
-    margin-right: 1rem;
+.current__icon {
+    display: none;
+    width: 128px;
+    height: 128px;
 }
-
-.weather__temp__icon {
-    margin-right: 1rem;
-}
-
 
 /* Aside - Weather Detail */
 
 aside {
     overflow: auto;
-    padding: 2rem 1rem;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 2.5rem;
+}
+
+.details__current {
+    margin: 3rem 0;  
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .details__byhour {
-    border-top: 1px solid black;
-    padding: 1rem 0;
+    border-top: 1px solid #6f93b0;
+    padding: 3rem 0;
 }
 
 .details__byhour__container {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #6f93b0;
 }
 
 
+/*Searcher Bar*/
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.searchbar__input {
+    flex: 1;
+    border-bottom: 1px solid white;
+}
+
+.searchbar__input input {
+    padding: 0.5em 1em;
+    max-width: 100%;
+    border: none;
+    background-color: transparent;
+    
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    background-color: transparent;
+    opacity: 1;
+    /* Firefox */
+    font-weight: bold;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    font-weight: bold;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+    font-weight: bold;
+}
+
+.searchbar__button button {
+    width: 80px;
+    height: 80px;
+    margin-left: 1rem;
+    border: none;
+    background: #add7ee;
+    cursor: pointer;
+}
+
+.fa-search {
+    font-size: 2rem;
+    color: black;
+}
+
 /* Media Queries */
 
-@media (min-width:1280px) {
+@media (min-width: 375px) {
+    nav {
+        padding-left: 2.5rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .current__icon {
+        display: block;
+    }
+}
+
+@media (min-width:1080px) {
+    h1 {
+        font-size: 8rem;
+        /* 64px */
+    }
     nav {
         grid-area: nav;
     }
     main {
         grid-area: main;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        padding: 1rem;
     }
     aside {
         grid-area: aside;
     }
     body {
-        grid-template-rows: 100px 1fr;
+        grid-template-rows: auto 1fr;
         grid-template-columns: 1fr 500px;
         grid-template-areas: "main nav" "main aside";
+    }
+}
+
+@media (max-width: 800px) {
+    .weather__content {
+        margin: 0;
     }
 }
