@@ -116,6 +116,7 @@ document.getElementById("searchButton").addEventListener("click", function (e) {
   weather.search();
 });
 
+
 function onLoad() {
   if ("geolocation" in navigator) {
     console.log("geolocation available");

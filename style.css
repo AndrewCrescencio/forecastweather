@@ -98,7 +98,7 @@ aside {
 
 /*Searcher Bar*/
 
-nav {
+.searchbar {
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -112,6 +112,7 @@ nav {
 
 .searchbar__input input {
     padding: 0.5em 1em;
+    width: 100%;
     max-width: 100%;
     border: none;
     background-color: transparent;
@@ -139,7 +140,7 @@ nav {
     font-weight: bold;
 }
 
-.searchbar__button button {
+#searchButton {
     width: 80px;
     height: 80px;
     margin-left: 1rem;
@@ -156,7 +157,7 @@ nav {
 /* Media Queries */
 
 @media (min-width: 375px) {
-    nav {
+    .searchbar {
         padding-left: 2.5rem;
     }
 }
@@ -172,7 +173,7 @@ nav {
         font-size: 8rem;
         /* 64px */
     }
-    nav {
+    .searchbar {
         grid-area: nav;
     }
     main {
