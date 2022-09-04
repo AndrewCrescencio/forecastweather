@@ -40,7 +40,6 @@ const weather = {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         this.displayWeather(data);
       });
   },
@@ -119,10 +118,8 @@ document.getElementById("searchButton").addEventListener("click", function (e) {
 //initial button event listener
 const initialBtn = document.querySelector("[data-initial]");
 initialBtn.style.cursor = "pointer";
-console.log(initialBtn);
 initialBtn.addEventListener("click", () => {
   if ("geolocation" in navigator) {
-    console.log("geolocation available");
     navigator.geolocation.getCurrentPosition((position) => {
       var lat = position.coords.latitude;
       var long = position.coords.longitude;
@@ -130,6 +127,6 @@ initialBtn.addEventListener("click", () => {
       weather.fetchWeather(onloadQuery);
     });
   } else {
-    console.alert("geolocation NOT available");
+    window.alert("geolocation NOT available");
   }
 });
