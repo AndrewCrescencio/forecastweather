@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 5rem;
+  /* 64px */
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: grid;
+  grid-template-rows: auto 50% 1fr;
+  font-family: "Roboto", sans-serif;
+  background-color: #29539b;
+  background-image: url(background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Main Content - Weather */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.weather__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 8rem 5rem;
+}
+
+.weather__content__main {
+  display: flex;
+  align-items: center;
+}
+
+.current__icon {
+  display: none;
+  width: 128px;
+  height: 128px;
+}
+
+/* Aside - Weather Detail */
+
+aside {
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 2.5rem;
+}
+
+.details__current {
+  margin: 3rem 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.details__byhour {
+  border-top: 1px solid #6f93b0;
+  padding: 3rem 0;
+}
+
+.details__byhour__container {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #6f93b0;
+}
+
+/*Searcher Bar*/
+
+.searchbar {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.searchbar__input {
+  flex: 1;
+  border-bottom: 1px solid white;
+}
+
+.searchbar__input input {
+  padding: 0.5em 1em;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  background-color: transparent;
+  opacity: 1;
+  /* Firefox */
+  font-weight: bold;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  font-weight: bold;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+  font-weight: bold;
+}
+
+#searchButton {
+  width: 80px;
+  height: 80px;
+  margin-left: 1rem;
+  border: none;
+  background: #add7ee;
+  cursor: pointer;
+}
+
+.fa-search {
+  font-size: 2rem;
+  color: black;
+}
+
+/* Media Queries */
+
+@media (min-width: 375px) {
+  .searchbar {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .current__icon {
+    display: block;
+  }
+}
+
+@media (min-width: 1080px) {
+  h1 {
+    font-size: 8rem;
+    /* 64px */
+  }
+  .searchbar {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  aside {
+    grid-area: aside;
+  }
+  body {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 500px;
+    grid-template-areas: "main nav" "main aside";
+  }
+}
+
+@media (max-width: 800px) {
+  .weather__content {
+    margin: 0;
+  }
+}

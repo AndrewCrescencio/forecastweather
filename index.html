@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/881d0e5c76.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" defer />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+      defer
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <meta name="og:site_name" content="ForecastWeather" />
+    <meta name="og:type" content="website" />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="https://raw.githubusercontent.com/AndrewCrescencio/forecastweather/main/preview.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      itemprop="image"
+      content="https://raw.githubusercontent.com/AndrewCrescencio/vite-lp/main/preview.png"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <!-- <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" /> -->
+    <meta property="og:image:alt" content="ForecastWeather" />
+    <meta name="og:title" content="ForecastWeather" />
+    <meta name="og:description" content="Forecast Weather app" />
+    <meta name="description" content="Search for city forecast weather" />
+    <title>Forecast Weather</title>
+  </head>
+
+  <body>
+    <!--  -->
+    <form class="searchbar">
+      <div class="searchbar__input">
+        <input id="searchInput" type="text" placeholder="Search..." />
+      </div>
+      <div class="searchbar__button">
+        <button type="submit" id="searchButton" aria-label="search button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </form>
+
+    <main class="weather">
+      <div class="weather__content">
+        <h1 class="current__temp"></h1>
+        <div class="weather__content__main">
+          <div>
+            <h2 data-initial class="current__city">
+              Click to check local forecast
+            </h2>
+            <p class="current__date"></p>
+          </div>
+          <img class="current__icon" alt="" />
+        </div>
+      </div>
+    </main>
+
+    <aside class="details">
+      <div class="details__current">
+        <h3>Weather details</h3>
+
+        <div class="row">
+          <span>Low and high</span
+          ><span
+            ><span class="current__mintemp">20</span> |
+            <span class="current__maxtemp">29c</span></span
+          >
+        </div>
+        <div class="row">
+          <span>Cloud</span><span class="current__cloud">12%</span>
+        </div>
+        <div class="row">
+          <span>Humidity</span><span class="current__humidity">79%</span>
+        </div>
+        <div class="row">
+          <span>Wind</span><span class="current__wind">1km/k</span>
+        </div>
+        <div class="row">
+          <span>Rain</span><span class="current__rain">mm</span>
+        </div>
+      </div>
+
+      <div class="details__byhour">
+        <h3>by hour</h3>
+      </div>
+    </aside>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
