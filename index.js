@@ -29,8 +29,10 @@ const year = date.getFullYear();
 
 const weather = {
   fetchWeather(query) {
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    console.log(API_KEY);
     fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=ecf729aa32264b8b8e9220838210103&q=${query}&days=3&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${query}&days=3&aqi=no&alerts=no`
     )
       .then((response) => {
         if (!response.ok) {
