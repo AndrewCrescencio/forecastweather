@@ -110,6 +110,7 @@ aside {
 }
 
 .searchbar__input input {
+  color: white;
   padding: 0.5em 1em;
   width: 100%;
   max-width: 100%;
