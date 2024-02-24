@@ -67,6 +67,10 @@ main {
   height: 128px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* Aside - Weather Detail */
 
 aside {
