@@ -65,6 +65,7 @@ const weather = {
     ).innerText = `${dayWeekArr[dayWeek]}, ${dayMonth} ${monthArr[month]} ${year}`;
     document.querySelector(".current__city").innerText = city;
     document.querySelector(".current__icon").src = current_icon;
+    document.querySelector(".current__icon").classList.remove("hidden");
     document.querySelector(".current__temp").innerText = current_temp + "°";
     document.querySelector(".current__mintemp").innerText = current_mintemp;
     document.querySelector(".current__maxtemp").innerText = current_maxtemp;
